@@ -2,7 +2,12 @@
 
 Izvor: `https://nattovia.com/products/nattokinase`
 
-## Pokretanje
+## Gde je uživo
+
+**https://aleksandar-wellovia.github.io/nattovia-new-offer/** (GitHub Pages, grana
+`main`, koren repoa)
+
+## Lokalno pokretanje
 
 Dupli klik na **`START.bat`**, ili:
 
@@ -10,16 +15,21 @@ Dupli klik na **`START.bat`**, ili:
 node serve.js
 ```
 
-Stranica: **http://localhost:8080/products/nattokinase**
-(koren `/` automatski preusmerava tamo)
+Stranica: **http://localhost:8080/**
 
-> **Bitno:** stranica se servira na putanji `/products/nattokinase`, a ne na `/`.
-> Theme i app skripte grade URL-ove iz `window.location.pathname` — npr. Kaching
-> Bundles traži `window.location.pathname + '.js'`. Ako se servira sa korena,
-> offer blok sa 3 bundle opcije se ne iscrta.
->
-> Iz istog razloga `index.html` **ne radi** ako se otvori direktno kao `file://` —
-> mora preko servera.
+> `index.html` **ne radi** ako se otvori direktno kao `file://` — mora preko
+> servera (skripte rade `fetch` na `_api/`, što `file://` blokira).
+
+### Zašto su putanje relativne
+
+Sve putanje u `index.html` su relativne (`assets/...`), ne root-apsolutne
+(`/assets/...`). Na GitHub Pages sajt živi pod `/<repo>/`, pa bi root-apsolutne
+gađale koren domena i **nijedna slika se ne bi učitala**. Relativne rade i
+lokalno i na Pages — pod uslovom da se stranica servira **iz korena**, zato
+`serve.js` više ne koristi putanju `/products/nattokinase`.
+
+`.nojekyll` u korenu je obavezan: bez njega Jekyll ignoriše foldere koji počinju
+donjom crtom, pa se `_api/` ne servira i offer blok ostaje bez podataka.
 
 ## Struktura
 
