@@ -38,7 +38,8 @@ const sniff = (b) => {
     fs.mkdirSync(path.dirname(abs), { recursive: true });
     fs.writeFileSync(abs, buf);
     console.log(`  ${rel}  (${ext}, ${(buf.length / 1024).toFixed(1)} KB)`);
-    out.push({ id: n.id, image: { url: '/' + rel } });
+    // relativno, ne "/" + rel - da radi i na GitHub Pages pod /<repo>/
+    out.push({ id: n.id, image: { url: rel } });
   }
   fs.writeFileSync(
     path.join(DIR, '_api', 'media-images-response.json'),

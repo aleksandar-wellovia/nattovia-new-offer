@@ -25,9 +25,9 @@ const OFFER = [
   { title: 'Buy One',                subtitle: 'You save $30',  badge: '',              price: 2999, compareAt: 5999,
     topBadge: 'Save $30',  buyOnce: '$30' },
   { title: 'Buy 2 Get 1 Free Gift',  subtitle: 'You save $85',  badge: 'Most Popular',  price: 5999, compareAt: 14498,
-    topBadge: 'Save $85',  buyOnce: '$85',  image: '/two-plus-one.png' },
+    topBadge: 'Save $85',  buyOnce: '$85',  image: 'two-plus-one.png' },
   { title: 'Buy 3 Get 2 Free Gifts', subtitle: 'You save $130', badge: 'Free Shipping', price: 8999, compareAt: 21997,
-    topBadge: 'Save $130', buyOnce: '$130', image: '/three-plus-two.png' },
+    topBadge: 'Save $130', buyOnce: '$130', image: 'three-plus-two.png' },
 ];
 
 // Okvir za slicicu bara. Kaching podrazumevano daje 48x48 kvadrat, u kom se
@@ -47,9 +47,9 @@ const GIFTS = {
   // imageHeight po stavci je opciono; bez njega vazi GIFTS.imageHeight ispod.
   items: [
     // freeship-green.png pravi _tools/recolor-truck.js iz originalnog freeship.avif
-    { image: '/freeship-green.png', was: '$9.95',  name: 'FREE Shipping',      imageHeight: 60 },
-    { image: '/gift1.png',          was: '$24.95', name: 'FREE Glass Jar',     imageHeight: 84 },
-    { image: '/gift2.png',          was: '$14.95', name: 'FREE Softgel Case',  imageHeight: 84 },
+    { image: 'freeship-green.png', was: '$9.95',  name: 'FREE Shipping',      imageHeight: 60 },
+    { image: 'gift1.png',          was: '$24.95', name: 'FREE Glass Jar',     imageHeight: 84 },
+    { image: 'gift2.png',          was: '$14.95', name: 'FREE Softgel Case',  imageHeight: 84 },
   ],
   // izgled
   // --bar-border-color je ista siva kojom Kaching ocrtava neizabrane kartice i
@@ -369,10 +369,10 @@ window.NV_BUY_ONCE = ${JSON.stringify(buyOnce)};
   window.fetch = function (input, init) {
     var url = typeof input === 'string' ? input : (input && input.url) || '';
     if (url.indexOf('FetchDealBlocks') !== -1) {
-      return orig('/_api/deal-blocks-response.json', { cache: 'no-store' });
+      return orig('_api/deal-blocks-response.json', { cache: 'no-store' });
     }
     if (url.indexOf('FetchMediaImages') !== -1) {
-      return orig('/_api/media-images-response.json', { cache: 'no-store' });
+      return orig('_api/media-images-response.json', { cache: 'no-store' });
     }
     return orig.apply(this, arguments);
   };

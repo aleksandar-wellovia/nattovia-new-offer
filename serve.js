@@ -1,8 +1,9 @@
 // Lokalni server za offline kopiju nattovia.com/products/nattokinase
 // Pokretanje:  node serve.js       ->  http://localhost:8080
 //
-// Stranica se servira na ISTOJ putanji kao live (/products/nattokinase) jer
-// theme/app skripte grade URL-ove iz window.location.pathname.
+// Stranica se servira iz KORENA jer su sve putanje u index.html relativne
+// ("assets/..."), da bi ista kopija radila i ovde i na GitHub Pages, gde sajt
+// zivi pod /<repo>/ i root-apsolutne putanje bi promasile.
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -10,7 +11,7 @@ const url = require('url');
 
 const ROOT = __dirname;
 const PORT = process.env.PORT || 8080;
-const PAGE_PATH = '/products/nattokinase';
+const OLD_PAGE_PATH = '/products/nattokinase';   // stara putanja -> redirect na /
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -57,19 +58,19 @@ http.createServer((req, res) => {
   let p;
   try { p = decodeURIComponent(parsed.pathname); } catch { p = parsed.pathname; }
 
-  // koren -> prava putanja stranice
+  // stranica je u korenu
   if (p === '/' || p === '' || p === '/index.html') {
-    res.writeHead(302, { Location: PAGE_PATH });
-    return res.end();
-  }
-
-  // sama stranica
-  if (p === PAGE_PATH || p === PAGE_PATH + '/') {
     return sendFile(res, path.join(ROOT, 'index.html'), MIME['.html']);
   }
 
+  // stara putanja iz ranije verzije -> koren
+  if (p === OLD_PAGE_PATH || p === OLD_PAGE_PATH + '/') {
+    res.writeHead(302, { Location: '/' });
+    return res.end();
+  }
+
   // Shopify runtime endpointi koje skripte pozivaju
-  if (p === PAGE_PATH + '.js') return sendFile(res, path.join(ROOT, '_api', 'product.js.json'), MIME['.json']);
+  if (p === OLD_PAGE_PATH + '.js') return sendFile(res, path.join(ROOT, '_api', 'product.js.json'), MIME['.json']);
   if (p === '/cart.js' || p === '/cart/update.js' || p === '/cart/change.js') {
     return sendFile(res, path.join(ROOT, '_api', 'cart.js.json'), MIME['.json']);
   }
@@ -88,5 +89,5 @@ http.createServer((req, res) => {
     sendFile(res, file);
   });
 }).listen(PORT, () => {
-  console.log('Nattovia offline kopija:  http://localhost:' + PORT + PAGE_PATH);
+  console.log('Nattovia offline kopija:  http://localhost:' + PORT + '/');
 });
