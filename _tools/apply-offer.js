@@ -39,6 +39,22 @@ const OFFER = [
 // position: 'center' | 'left center' | 'right center'
 const IMAGE_SLOT = { width: '152px', height: '52px', position: 'center' };
 
+// --- red sa cenom iznad bloka, na telefonu ---------------------------------
+// Theme daje #nv-custom-price sa flex-wrap: wrap. Na 390px zbir sirina je
+// 28px cena (92) + precrtano (66) + badge (198) + 2x12 razmaka = 380px, a
+// dostupno je 360px, pa zeleni badge pada u drugi red. Ovde ga skupljamo
+// taman toliko da stane u jedan red.
+//
+// Theme-ova pravila (#nv-price-sale ...) stoje NIZE u dokumentu od ovog stylea,
+// pa na istoj specificnosti pobedjuju - zato "body #nv-custom-price ..." prefiks.
+const PRICE_ROW = {
+  enabled: true,
+  tiers: [
+    { maxWidth: 480, gap: '8px', sale: '24px', compare: '16px', badge: '11px', badgePad: '4px 10px' },
+    { maxWidth: 374, gap: '6px', sale: '22px', compare: '15px', badge: '10px', badgePad: '3px 8px' },
+  ],
+};
+
 // --- panel "GIFTS UNLOCKED" ispod poslednje kartice ------------------------
 // Slike stoje u korenu foldera; zameni fajl istim imenom i slika se menja.
 const GIFTS = {
@@ -238,6 +254,22 @@ const giftsPerItemCssMobile = GIFTS.enabled ? GIFTS.items.map((g, i) => {
   return d ? `  #nv-gifts .nv-gifts__item--${i} img { padding: ${d}px 0; }` : '';
 }).filter(Boolean).join('\n') : '';
 
+const priceRowCss = PRICE_ROW.enabled ? PRICE_ROW.tiers.map(t => `
+@media (max-width: ${t.maxWidth}px) {
+  body #nv-custom-price.ready {
+    flex-wrap: nowrap;
+    gap: ${t.gap};
+  }
+  body #nv-custom-price #nv-price-sale    { font-size: ${t.sale}; flex: 0 0 auto; }
+  body #nv-custom-price #nv-price-compare { font-size: ${t.compare}; flex: 0 0 auto; }
+  body #nv-custom-price #nv-price-badge   {
+    font-size: ${t.badge};
+    padding: ${t.badgePad};
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+}`).join('\n') : '';
+
 const giftsCss = GIFTS.enabled ? `
 #nv-gifts {
   border: ${GIFTS.borderWidth} solid ${GIFTS.borderColor};
@@ -348,8 +380,9 @@ ${giftsPerItemCssMobile}
 // Kaching pravilo je ".kaching-bundles .kaching-bundles__bar-image" (0,2,0) i
 // ubacuje se u runtime, dakle POSLE ovog stylea - na istoj specificnosti bi ono
 // pobedilo. Zato "img." u selektoru: (0,2,1) sigurno nadjacava.
-const wideCss = (customImages.length || GIFTS.enabled)
+const wideCss = (customImages.length || GIFTS.enabled || PRICE_ROW.enabled)
   ? `<style>
+${priceRowCss}
 ${customImages.length ? `.kaching-bundles img.kaching-bundles__bar-image {
   width: ${IMAGE_SLOT.width};
   height: ${IMAGE_SLOT.height};

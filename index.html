@@ -2,6 +2,36 @@
 <html class="js" lang="en">
   <head>
 <!-- nv-local-offer --><style>
+
+@media (max-width: 480px) {
+  body #nv-custom-price.ready {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  body #nv-custom-price #nv-price-sale    { font-size: 24px; flex: 0 0 auto; }
+  body #nv-custom-price #nv-price-compare { font-size: 16px; flex: 0 0 auto; }
+  body #nv-custom-price #nv-price-badge   {
+    font-size: 11px;
+    padding: 4px 10px;
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 374px) {
+  body #nv-custom-price.ready {
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+  body #nv-custom-price #nv-price-sale    { font-size: 22px; flex: 0 0 auto; }
+  body #nv-custom-price #nv-price-compare { font-size: 15px; flex: 0 0 auto; }
+  body #nv-custom-price #nv-price-badge   {
+    font-size: 10px;
+    padding: 3px 8px;
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+}
 .kaching-bundles img.kaching-bundles__bar-image {
   width: 152px;
   height: 52px;
@@ -236,6 +266,7 @@ window.NV_BUY_ONCE = {"0":"$30","1":"$85","2":"$130"};
   });
 })();
 </script><!-- nv-local-offer -->
+
  
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

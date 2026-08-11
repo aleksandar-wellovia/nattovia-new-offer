@@ -106,6 +106,19 @@ polja u `OFFER` nizu:
 Ako se `topBadge` izostavi, theme vraća automatski računat procenat iz prikazanih
 cena (bilo bi 50% / 59% / 59%).
 
+### Red sa cenom na telefonu
+
+Theme daje `#nv-custom-price` sa `flex-wrap: wrap`. Na 390px zbir širina je
+cena (92px) + precrtano (66px) + badge (198px) + 2×12px razmaka = **380px**, a
+dostupno je 360px — pa je zeleni badge padao u drugi red.
+
+`PRICE_ROW` u `apply-offer.js` ga na `≤480px` i `≤374px` skuplja taman toliko da
+stane u jedan red (`flex-wrap: nowrap`, manji font i razmaci). Izmereno:
+390px → 334px ukupno, 360px → 303px. Desktop je netaknut.
+
+Ta pravila koriste `body #nv-custom-price ...` prefiks jer theme-ov CSS stoji
+**niže u dokumentu** od injektovanog stylea, pa bi na istoj specifičnosti pobedio.
+
 ### Linija „BUY ONCE — NO SAVINGS … →"
 
 Takođe prati izabrani bundle, preko `buyOnce` polja:
