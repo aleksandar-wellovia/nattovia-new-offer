@@ -1,0 +1,407 @@
+[
+ {
+  "blockTitle": "Low Stock - Selling Fast",
+  "blockVisibility": "selected-products",
+  "discountName": "",
+  "excludeB2bCustomers": false,
+  "blockLayout": "vertical",
+  "differentVariantsEnabled": false,
+  "hideVariantPicker": false,
+  "disableVariantOptionSync": false,
+  "hideUnavailableOptions": false,
+  "showPricesPerItem": false,
+  "showBothPrices": false,
+  "unitLabel": "",
+  "useProductCompareAtPrice": true,
+  "showPricesWithoutDecimals": false,
+  "priceRounding": false,
+  "priceRoundingPrecision": ".00",
+  "updateNativePrice": false,
+  "updateNativePriceType": "item",
+  "skipCart": false,
+  "lowStockAlertEnabled": false,
+  "lowStockAlert": null,
+  "showVariantsForSingleQuantity": true,
+  "preselectedDealBarId": "btpw",
+  "dealBars": [
+   {
+    "id": "3_uS",
+    "title": "Buy One",
+    "subtitle": "You save $30",
+    "label": "",
+    "badgeStyle": "simple",
+    "badgeText": "",
+    "badgeImageGID": null,
+    "mediaImageGID": "gid://shopify/MediaImage/32686552711353",
+    "freeGifts": [],
+    "multipleGiftsSelectors": [],
+    "upsells": [],
+    "productPersonalisation": null,
+    "highlights": null,
+    "sellingPlanEnabled": false,
+    "sellingPlanGid": null,
+    "hideBehindScratchOff": false,
+    "showAsSoldOutEnabled": false,
+    "showAsSoldOut": null,
+    "dealBarType": "quantity-break",
+    "quantity": 1,
+    "quantitySelector": false,
+    "discountType": "default",
+    "discountValue": 29.95,
+    "featuredMediaGID": null,
+    "featuredProductGID": null,
+    "featuredImages": [],
+    "freeGiftsSummary": null
+   },
+   {
+    "id": "btpw",
+    "title": "Buy 2 Get 1 Free Gift",
+    "subtitle": "You save $85",
+    "label": "",
+    "badgeStyle": "simple",
+    "badgeText": "Most Popular",
+    "badgeImageGID": null,
+    "mediaImageGID": "gid://shopify/MediaImage/32686564737209",
+    "freeGifts": [],
+    "multipleGiftsSelectors": [],
+    "upsells": [],
+    "productPersonalisation": null,
+    "highlights": null,
+    "sellingPlanEnabled": false,
+    "sellingPlanGid": null,
+    "hideBehindScratchOff": false,
+    "showAsSoldOutEnabled": false,
+    "showAsSoldOut": null,
+    "dealBarType": "quantity-break",
+    "quantity": 1,
+    "quantitySelector": false,
+    "discountType": "default",
+    "discountValue": 59.95,
+    "featuredMediaGID": null,
+    "featuredProductGID": null,
+    "featuredImages": [],
+    "freeGiftsSummary": null
+   },
+   {
+    "id": "JAmB",
+    "title": "Buy 3 Get 2 Free Gifts",
+    "subtitle": "You save $130",
+    "label": "",
+    "badgeStyle": "simple",
+    "badgeText": "Free Shipping",
+    "badgeImageGID": null,
+    "mediaImageGID": "gid://shopify/MediaImage/32686573060281",
+    "freeGifts": [],
+    "multipleGiftsSelectors": [],
+    "upsells": [],
+    "productPersonalisation": null,
+    "highlights": null,
+    "sellingPlanEnabled": false,
+    "sellingPlanGid": "gid://shopify/SellingPlan/4622516409",
+    "hideBehindScratchOff": false,
+    "showAsSoldOutEnabled": false,
+    "showAsSoldOut": null,
+    "dealBarType": "quantity-break",
+    "quantity": 1,
+    "quantitySelector": false,
+    "discountType": "default",
+    "discountValue": 88.95,
+    "featuredMediaGID": null,
+    "featuredProductGID": null,
+    "featuredImages": [],
+    "freeGiftsSummary": null
+   }
+  ],
+  "badgesEnabled": true,
+  "badges": [],
+  "cornerRadius": 7,
+  "spacing": 0.6,
+  "colors": {
+   "background": {
+    "red": 251,
+    "green": 249,
+    "blue": 248,
+    "alpha": 1
+   },
+   "selectedBackground": {
+    "red": 234,
+    "green": 243,
+    "blue": 239,
+    "alpha": 1
+   },
+   "border": {
+    "red": 58,
+    "green": 96,
+    "blue": 81,
+    "alpha": 1
+   },
+   "blockTitle": {
+    "red": 0,
+    "green": 0,
+    "blue": 0,
+    "alpha": 1
+   },
+   "title": {
+    "red": 0,
+    "green": 0,
+    "blue": 0,
+    "alpha": 1
+   },
+   "subtitle": {
+    "red": 40,
+    "green": 113,
+    "blue": 84,
+    "alpha": 1
+   },
+   "price": {
+    "red": 0,
+    "green": 0,
+    "blue": 0,
+    "alpha": 1
+   },
+   "fullPrice": {
+    "red": 85,
+    "green": 85,
+    "blue": 85,
+    "alpha": 1
+   },
+   "labelBackground": {
+    "red": 236,
+    "green": 229,
+    "blue": 248,
+    "alpha": 1
+   },
+   "label": {
+    "red": 0,
+    "green": 0,
+    "blue": 0,
+    "alpha": 1
+   },
+   "badgeBackground": {
+    "red": 58,
+    "green": 96,
+    "blue": 81,
+    "alpha": 1
+   },
+   "badgeText": {
+    "red": 255,
+    "green": 255,
+    "blue": 255,
+    "alpha": 1
+   },
+   "freeGiftBackground": {
+    "red": 216,
+    "green": 203,
+    "blue": 240,
+    "alpha": 1
+   },
+   "freeGiftText": {
+    "red": 0,
+    "green": 0,
+    "blue": 0,
+    "alpha": 1
+   },
+   "freeGiftSelectedBackground": {
+    "red": 58,
+    "green": 96,
+    "blue": 81,
+    "alpha": 1
+   },
+   "freeGiftSelectedText": {
+    "red": 255,
+    "green": 255,
+    "blue": 255,
+    "alpha": 1
+   },
+   "upsellBackground": {
+    "red": 229,
+    "green": 220,
+    "blue": 245,
+    "alpha": 1
+   },
+   "upsellText": {
+    "red": 0,
+    "green": 0,
+    "blue": 0,
+    "alpha": 1
+   },
+   "upsellSelectedBackground": {
+    "red": 229,
+    "green": 220,
+    "blue": 245,
+    "alpha": 1
+   },
+   "upsellSelectedText": {
+    "red": 0,
+    "green": 0,
+    "blue": 0,
+    "alpha": 1
+   }
+  },
+  "fonts": {
+   "fontFamily": null,
+   "blockTitle": {
+    "size": 14,
+    "style": "bold"
+   },
+   "title": {
+    "size": 16,
+    "style": "medium"
+   },
+   "subtitle": {
+    "size": 13,
+    "style": "regular"
+   },
+   "label": {
+    "size": 12,
+    "style": "regular"
+   },
+   "freeGift": {
+    "size": 13,
+    "style": "bold"
+   },
+   "upsell": {
+    "size": 13,
+    "style": "bold"
+   },
+   "unitLabel": {
+    "size": 14,
+    "style": "regular"
+   }
+  },
+  "customStylesEnabled": false,
+  "customStyles": "",
+  "swatchOptions": [],
+  "swatchSize": 18,
+  "swatchShape": "circle",
+  "showSelectedSwatchName": false,
+  "imageSize": 48,
+  "imageCornerRadius": 6,
+  "collectionBreaksEnabled": false,
+  "collectionBreaks": null,
+  "chooseProductModal": null,
+  "timerEnabled": false,
+  "scratchOffEnabled": false,
+  "scratchOff": null,
+  "subscriptionsEnabled": true,
+  "subscriptions": {
+   "layout": "checkbox",
+   "position": "below",
+   "title": "",
+   "subscribeTitle": "Subscribe & Save {{selling_plan_discount}}",
+   "subscribeSubtitle": "Zero Commitment, Cancel Anytime",
+   "oneTimeTitle": "One-time purchase",
+   "oneTimeSubtitle": "",
+   "subscribeByDefault": true,
+   "showPrices": false,
+   "hideDealBarPrices": false,
+   "titleColor": {
+    "red": 0,
+    "green": 0,
+    "blue": 0,
+    "alpha": 1
+   },
+   "subtitleColor": {
+    "red": 85,
+    "green": 85,
+    "blue": 85,
+    "alpha": 1
+   },
+   "titleSize": 15,
+   "subtitleSize": 13,
+   "highlights": null
+  },
+  "currency": null,
+  "stickyAtcEnabled": false,
+  "stickyAtc": {
+   "title": "{{product}}",
+   "buttonText": "Choose bundle",
+   "backgroundColor": {
+    "red": 255,
+    "green": 255,
+    "blue": 255,
+    "alpha": 1
+   },
+   "titleColor": {
+    "red": 0,
+    "green": 0,
+    "blue": 0,
+    "alpha": 1
+   },
+   "buttonColor": {
+    "red": 48,
+    "green": 48,
+    "blue": 48,
+    "alpha": 1
+   },
+   "buttonTextColor": {
+    "red": 255,
+    "green": 255,
+    "blue": 255,
+    "alpha": 1
+   },
+   "titleFont": {
+    "size": 16,
+    "style": "regular"
+   },
+   "buttonFont": {
+    "size": 16,
+    "style": "bold"
+   },
+   "productPhotoSize": 40,
+   "buttonPadding": 15,
+   "productPhotoCornerRadius": 0,
+   "buttonCornerRadius": 8,
+   "sameSizeOnMobile": true,
+   "mobile": {
+    "titleFontSize": 16,
+    "buttonFontSize": 16,
+    "productPhotoSize": 40,
+    "buttonPadding": 15,
+    "productPhotoCornerRadius": 0,
+    "buttonCornerRadius": 8
+   }
+  },
+  "progressiveGiftsEnabled": false,
+  "checkboxUpsellsEnabled": false,
+  "savingsSummaryEnabled": false,
+  "savingsSummary": null,
+  "excludedProductIds": [],
+  "excludedCollectionIds": [],
+  "selectedProductIds": [
+   8556138168505
+  ],
+  "selectedCollectionIds": [],
+  "marketId": null,
+  "excludedMarketIds": [],
+  "timer": null,
+  "progressiveGifts": null,
+  "checkboxUpsells": null,
+  "defaultVariantsV2": [
+   {
+    "dealBarId": "JAmB",
+    "productGID": 8556138168505,
+    "variantGIDs": [
+     47505888706745
+    ]
+   },
+   {
+    "dealBarId": "3_uS",
+    "productGID": 8556138168505,
+    "variantGIDs": [
+     47505888641209
+    ]
+   },
+   {
+    "dealBarId": "btpw",
+    "productGID": 8556138168505,
+    "variantGIDs": [
+     47505888673977
+    ]
+   }
+  ],
+  "id": "e1d3c345-8bfe-453d-8c02-451fd134545c",
+  "nanoId": "G6xe",
+  "versionId": "4b7e4698-0614-40a9-a8c5-96b2dd0c52d5"
+ }
+]

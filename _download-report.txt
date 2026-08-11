@@ -1,0 +1,16 @@
+page: https://nattovia.com/products/nattokinase
+ok: 255
+failed: 12
+
+FAIL https://shop.app/ -> HTTP 403
+FAIL https://nattovia.com/products/c,e.addEventListener(%22load%22,l,%7Bonce:!0%7D),e.addEventListener(%22error%22,()= -> HTTP 404
+FAIL https://nattovia.com/products/urls[i]; -> HTTP 404
+FAIL https://nattovia.com/products/d;return%7Dif(!d.includes(%22://%22)&&!d.startsWith(%22//%22))%7Bif(!/%5E[a-zA-Z0-9/-._~:/? -> HTTP 404
+FAIL https://nattovia.com/products/==d||n.toString()===d))window.location.href=d%7D%7D -> HTTP 404
+FAIL https://nattovia.com/products/r,i&&(c.integrity=i,c.crossOrigin=%22anonymous%22),s)for(var -> HTTP 404
+FAIL https://monorail-edge.shopifysvc.com/ -> HTTP 404
+FAIL https://www.googletagmanager.com/gtm.js?id= -> HTTP 400
+FAIL https://nattovia.com/account -> HTTP 406
+FAIL https://cdn.shopify.com/s/files/1/0776/1805/3305/files/nattovia-check-mark-white-464fff3592.webp -> HTTP 404
+FAIL https://nattovia.com/checkout -> HTTP 403
+FAIL https://nattovia.com/products/d -> HTTP 404
